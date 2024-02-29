@@ -19,9 +19,13 @@ public class ChangeMaker
 		int centsAfterQuarters = totalCents % 25;
 		int dimes = centsAfterQuarters / 10;
 		int centsAfterDimes = centsAfterQuarters % 10;
+		int nickels = centsAfterDimes / 5;
+		int centsAfterNickels = centsAfterDimes % 5;
+		int pennies = centsAfterNickels / 1;
+		int centsAfterPennies = centsAfterNickels & 1;
 		
 		System.out.println(dollars + " dollars and " + cents + " cents are: ");
-		System.out.println(quarters + " quarters, " + dimes + "dimes, " + nickels + " nickesl, and " + pennies + "pennies");
+		System.out.println(quarters + " quarter(s), " + dimes + " dime(s), " + nickels + " nickele(s), and " + pennies + " pennie(s)");
 
 	}
 

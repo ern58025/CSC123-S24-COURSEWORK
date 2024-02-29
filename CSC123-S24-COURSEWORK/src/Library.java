@@ -34,7 +34,7 @@ public class Library
 	{
 		return state;
 	}
-	public void setState(String State)
+	public void setState(String state)
 	{
 		this.state = state;
 	}

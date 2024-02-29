@@ -37,7 +37,7 @@ public class BankAccount
 	}
 	public String getOwnerFullName()
 	{
-		return ownerFirstName + " " + ownerFirstName;
+		return ownerFirstName + " " + ownerLastName;
 	}
 	
 
