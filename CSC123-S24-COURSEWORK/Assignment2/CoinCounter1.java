@@ -31,5 +31,6 @@ public class CoinCounter1
         totalCents += pennies;       
         return totalCents;
     }
+    
 }
 
