@@ -1,27 +1,38 @@
-import java.util.Date;
-import java.util.ArrayList;
-
-public class Main 
-{
-	public static void main(String[] args)
-	{
-		Owner o1 = new Owner("John", "Arrow", "123 Main ST", "NewYork", "CA", "39002");
-		Owner o2 = new Owner("Jake", "Buker", "321 Flower ST", "Canada", "CA", "9902");
-		
-		ArrayList<Owner> owner = new ArrayList<>();
-		owner.add(o1);
-		owner.add(o2);
-		
-		Date dateOfMfg = new Date(0);
-		Vehicle vehicle = new Vehicle("DSSSSDDDsss", dateOfMfg, "Toyota", "Camry", "Black", 4);
-		Citation citation = new Citation(382, 200.0, "Unpaid", registration);
-		
-		System.out.println("Owner 1: " + o1.firstName + " " + o1.lastName);
-		System.out.println("Owner 2: " + o2.firstName + " " + o2.lastName);
-		System.out.println("Vehicle: " + vehicle.make + " " + vehicle.model);
-		System.out.println("Registration: " + registration.uniqueID);
-		System.out.println("Citation: " + citation.offenceCode);
-
-	}
-
+public class Main {
+    public static void main(String[] args) {
+        // Create DMV instance
+        DMV1 dmv = new DMV1("California");
+        
+        // Create some sample data
+        Owner owner1 = new Owner("John", "Doe", "111 Main St", "Los Angeles", "CA", "90001");
+        Vehicle vehicle1 = new Vehicle("ABC123", "2111-01-01", "Toyota", "Camry", "Black", 4);
+        
+        Owner owner2 = new Owner("Jane", "Smith", "111 Oak Ave", "San Francisco", "CA", "91111");
+        Vehicle Vehicle = new Vehicle("XYZ456", "2111-01-11", "Honda", "Accord", "Silver", 4);
+        
+        dmv.registerVehicle(owner1, vehicle1);
+        dmv.registerVehicle(owner2, Vehicle);
+        
+        // List registrations
+        System.out.println("Registrations:");
+        dmv.listRegistrations();
+        
+        System.out.println("\nSearch Registration by Plate:");
+        Registration foundRegistration = dmv.searchRegistrationByPlate("ABC123");
+        if (foundRegistration != null) {
+            System.out.println(foundRegistration);
+        } else {
+            System.out.println("Registration not found.");
+        }
+        
+        Citation citation = new Citation("2024-05-06", 12345, 100.0, "Pending", foundRegistration);
+        
+        dmv.registerCitation(citation);
+        
+        System.out.println("\nCitations:");
+        dmv.listCitations();
+        
+        System.out.println("\nSearch Citation by ID:");
+      
+    }
 }

@@ -1,11 +1,11 @@
-public class Book 
+public class Book1 
 {
 		private String ISBN;
 		private int numOfPages;
 		private String authorName;
 		private int amazonRank;
 		
-		public Book(String authorName, String ISBN, int numOfPages)
+		public Book1(String authorName, String ISBN, int numOfPages)
 		{
 			this.authorName = authorName;
 			this.ISBN = ISBN;
@@ -32,13 +32,13 @@ public class Book
 			return "Title: "+ authorName+", Pages: "+numOfPages+", Rank: " + amazonRank;
 		}
 	
-		public boolean equals(Book h) 
+		public boolean equals(Book1 h) 
 		{
 			return getAuthor().equals(h.getAuthor()) && getAmazonRank() == h.getAmazonRank() && getNumberOfPages() == h.getNumberOfPages();
 	    }
-		public Book createCopy()
+		public Book1 createCopy()
 		{
-			Book h = new Book(authorName, ISBN, numOfPages);
+			Book1 h = new Book1(authorName, ISBN, numOfPages);
 			return h;
 		}
 		

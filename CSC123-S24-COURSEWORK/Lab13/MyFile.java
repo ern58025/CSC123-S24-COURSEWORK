@@ -9,8 +9,8 @@ public class MyFile
 {
 	public static void main(String [] args) throws IOException
 	{
-		File source = new File("/Users/renes/Lab13F/file.txt");
-		File dest = new File("/Users/renes/Lab13F/file.txt");
+		File source = new File("/Users/renes/Lab13F/");
+		File dest = new File("/Users/renes/Lab13F/");
 		
 		if(!source.exists())
 		{

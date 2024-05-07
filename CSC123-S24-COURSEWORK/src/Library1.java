@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 import java.util.List;
-public class Library 
+public class Library1 
 {
 	private String libraryName;
 	private String city;
 	private String state;
-	private List<Book>books;
+	private List<Book1>books;
 	
-	public Library(String libraryName, String city, String state)
+	public Library1(String libraryName, String city, String state)
 	{
 		this.libraryName = libraryName;
 		this.city = city;
@@ -38,15 +38,15 @@ public class Library
 	{
 		this.state = state;
 	}
-	public List<Book>getBooks()
+	public List<Book1>getBooks()
 	{
 		return books;
 	}
-	public void addBook(Book B)
+	public void addBook(Book1 B)
 	{
 		books.add(B);
 	}
-	public void removeBook(Book B)
+	public void removeBook(Book1 B)
 	{
 		books.remove(B);
 	}
@@ -54,7 +54,7 @@ public class Library
 	{
 		return "Library Name: " + libraryName + ", City: " + city + ", State: " + state + ", Books: " + books;
 	}
-	public boolean equals(Library h)
+	public boolean equals(Library1 h)
 	{
 		return getLibraryName().equals(h.getLibraryName()) && getCity().equals(h.getCity()) && getState().equals(h.getState());
 	}
