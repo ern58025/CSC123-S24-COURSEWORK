@@ -1,20 +1,14 @@
-
 public class ZooKeeper 
 {
 	public static void main(String[] args)
 	{
-		Animal lion = new Animal("Pat Lion ", 21, 230);
-		
-//		Lion lion1 = new Lion("Type: ", 2, 2, "sk");
-//		Elephant elephant = new Elephant("skl", 2, 2, "sl");
-//		
-//		lion.addAnimal(lion1);
-//		lion.addAnimal(elephant);
-		lion.makeSound();
+		Animal lion = new Lion("Leo", 5, 200);
+        Animal elephant = new Elephant("Jumbo", 10, 5000);
+        Animal monkey = new Monkey("George", 3, 50);
+
+        Animal[] animals = {lion, elephant, monkey};
+        for (Animal animal : animals) {
+            animal.makeSound();
 	}
 	
-	
-	
-	
-
-}
+}}
