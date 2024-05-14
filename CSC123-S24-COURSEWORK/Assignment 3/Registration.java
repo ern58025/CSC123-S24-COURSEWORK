@@ -66,7 +66,6 @@ public class Registration
 	public void setPlate(String plate) {
 		this.plate = plate;
 	}
-
 	@Override
 	public String toString() {
 		return "Registration [uniqueID=" + uniqueID + ", startDate=" + startDate + ", endDate=" + endDate + ", owner="

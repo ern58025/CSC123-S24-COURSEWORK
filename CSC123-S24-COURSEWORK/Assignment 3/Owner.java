@@ -64,7 +64,6 @@ public class Owner
 	public void setZip(String zip) {
 		this.zip = zip;
 	}
-
 	@Override
 	public String toString() {
 		return "Owner [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city=" + city

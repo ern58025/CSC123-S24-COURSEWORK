@@ -12,7 +12,6 @@ public class DMV1 {
         this.citations = new ArrayList<>();
     }
     
-    // Methods
     public void registerVehicle(Owner owner, Vehicle vehicle) {
         Registration registration = new Registration(generateUniqueID(), getCurrentDate(), null, owner, vehicle, null);
         registrations.add(registration);
@@ -42,13 +41,12 @@ public class DMV1 {
     }
     public Registration searchRegistrationByPlate(String plate) {
         for (Registration registration : registrations) {
-            if (registration.getPlate().equals(plate)) {
+            if (registration.getPlate() != null && registration.getPlate().equals(plate)) {
                 return registration;
             }
         }
         return null; 
     }
-    
     public Registration searchRegistrationByID(int uniqueID) {
         for (Registration registration : registrations) {
             if (registration.getUniqueID() == uniqueID) {
@@ -57,7 +55,6 @@ public class DMV1 {
         }
         return null; 
     }
-    
     public List<Registration> searchRegistrationByOwner(Owner owner) {
         List<Registration> ownerRegistrations = new ArrayList<>();
         for (Registration registration : registrations) {
@@ -87,7 +84,6 @@ public class DMV1 {
         }
         return ownerCitations;
     }
-    
     public Citation searchCitationByID(int offenceCode) {
         for (Citation citation : citations) {
             if (citation.getOffenceCode() == offenceCode) {
@@ -96,5 +92,4 @@ public class DMV1 {
         }
         return null; 
     }
-   
 }
